@@ -1,0 +1,27 @@
+
+public class Test {
+	public static void main(String[] args) {
+		boolean dizi[]=new boolean[1000];
+		for (int i = 0; i < dizi.length; i++)
+		{
+			dizi[i]=true;
+		}
+		for (int i = 2; i < dizi.length; i++) 
+		{
+			if(dizi[i]==true)
+			{
+				for (int j =2*i; j < dizi.length; j=j+i)
+				{
+					dizi[j]=false;
+				}
+			}
+		}
+		for (int i = 2; i < dizi.length; i++) 
+		{
+			if(dizi[i]==true)
+			{
+				System.out.println(i);
+			}
+		}
+	}
+}
